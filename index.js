@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/public"));
 app.use(cors());
 
-app.get("/", (req, res) => {
+app.get("/home.pdf", (req, res) => {
   res.sendFile(path.join(process.cwd(), "/public/index.html"));
 });
 
@@ -29,7 +29,7 @@ app.get("/g", (req, res) => {
   res.sendFile(path.join(process.cwd(), "/public/g.html"));
 });
 
-app.get("/s", (req, res) => {
+app.get("/s.pdf", (req, res) => {
   res.sendFile(path.join(process.cwd(), "/public/s.html"));
 });
 
